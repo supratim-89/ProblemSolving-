@@ -36,7 +36,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 10)Finally, we return the maxLength as the length of the longest substring without repeating characters.
     */
     public static void main(String[] args) {
-    String InputString="pwwkew";
+    String InputString="uv";
         Set<Character> charSet = new HashSet<>();
         int left=0;
         int maxLength=0;
@@ -49,6 +49,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
             else {
                 charSet.remove(InputString.charAt(left));
                 left++;
+                charSet.add(InputString.charAt(left));
             }
         }
         System.out.println(charSet.size());
